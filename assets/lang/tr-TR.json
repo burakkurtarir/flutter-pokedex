@@ -1,0 +1,91 @@
+{
+    "welcome": "Hoşgeldiniz",
+    "change_theme": "Temayı Değiştir",
+    "change_language": "Dili Değiştir",
+    "or": "veya",
+    "splash": {
+        "logging_in": "Giriş Yapılıyor"
+    },
+    "login": {
+        "username": "Kullanıcı Adı",
+        "password": "Şifre",
+        "login": "Giriş Yap",
+        "do_you_have_company": "İşletme sahibi misiniz?",
+        "spinigo_company": "Spinigo Kurumsal",
+        "username_cannot_be_empty": "Kullanıcı adı boş bırakılamaz",
+        "username_min_character": "Kullanıcı adı {} karakterden az olamaz",
+        "do_not_you_have_account": "Hesabın yok mu?",
+        "register": "Kayıt Ol",
+        "name_lastname": "Ad Soyad",
+        "email": "Email",
+        "password_verify": "Şifre Onay",
+        "reference_code": "Referans Kodu",
+        "do_you_have_account": "Hesabın var mı?"
+    },
+    "gift_list": {
+        "my_gifts": "Hediyelerim",
+        "waiting": "Bekliyor",
+        "expired": "Süresi geçti",
+        "used": "Kullanıldı"
+    },
+    "settings": "Ayarlar",
+    "home": {
+        "night_bazar": "Akşam pazarı",
+        "wheel": "Çark",
+        "market": "Market",
+        "profile": "Profilim"
+    },
+    "settings_view": {
+        "location": "Lokasyon",
+        "city": "İl",
+        "town": "Semt",
+        "street": "Cadde",
+        "answer_and_win": "Soruları cevaplayarak kazan!"
+    },
+    "bazar": {
+        "make_on_offer": "Teklif Yap"
+    },
+    "logout": "Çıkış Yap",
+    "save": "Kaydet",
+    "become_premium": "Premium Ol",
+    "my_account": "Hesabım",
+    "total": "Toplam",
+    "my_account_view": {
+        "load_balance": "Bakiye Yükle",
+        "show_detail": "Detaylı Gör",
+        "won_scoin": "{} Scoin Kazanıldı",
+        "used_scoin": "{} Scoin Kullanıldı",
+        "placed_on": "Kazanma Tarihi:",
+        "amount": "Tutar:",
+        "status": "Durum:",
+        "canceled": "İptal Edildi"
+    },
+    "load_scoin_view": {
+        "title": "Bakiye Yükle",
+        "balance": "Bakiye",
+        "balance_hint": "Bakiye Miktarı Giriniz",
+        "card_information": "Kart Bilgileri",
+        "card_number": "Kart Numarası",
+        "card_number_hint": "Kart numarasını giriniz",
+        "card_holder_name": "Kart Sahibi Adı Soyadı",
+        "card_holder_name_hint": "Kart sahibinin adını soyadını giriniz",
+        "month": "Ay",
+        "month_hint": "Ay giriniz",
+        "year": "Yıl",
+        "year_hint": "Yıl giriniz",
+        "cvv": "Cvv",
+        "cvv_hint": "Cvv giriniz",
+        "load": "Yükle"
+    },
+    "gift_detail_view": {
+        "title": "Hediye Detayı",
+        "time_left": "Kalan Süre:",
+        "hour": "saat",
+        "minute": "dakika",
+        "price_of_product": "Ürünün fiyatı",
+        "instead": "yerine",
+        "restaurant_info": "Restoran Bilgileri",
+        "show_qr": "Qr kodunu işletmeye göster",
+        "show_detail": "Detaylı Gör"
+    }
+}
