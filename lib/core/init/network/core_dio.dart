@@ -25,11 +25,13 @@ class CoreDio with DioMixin implements Dio, ICoreDio {
     required HttpTypes type,
     required T parseModel,
     dynamic data,
+    Map<String, dynamic>? queryParameters,
   }) async {
     final response = await request(
       path,
       data: data,
       options: Options(method: type.rawValue),
+      queryParameters: queryParameters,
     );
     switch (response.statusCode) {
       case HttpStatus.ok:

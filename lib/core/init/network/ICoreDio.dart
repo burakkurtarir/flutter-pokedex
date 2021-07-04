@@ -8,5 +8,6 @@ abstract class ICoreDio {
     required HttpTypes type,
     required T parseModel,
     dynamic data,
+    Map<String, dynamic>? queryParameters,
   });
 }

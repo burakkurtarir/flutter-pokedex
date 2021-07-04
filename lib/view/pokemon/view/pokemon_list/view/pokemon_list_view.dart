@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_pokedex/view/pokemon/model/pokemon_list_result_model.dart';
 import 'package:flutter_pokedex/view/pokemon/resource/pokemon_resource.dart';
 
 import '../../../../../core/base/view/base_view.dart';
@@ -22,7 +23,7 @@ class PokemonListView extends StatelessWidget {
               if (viewModel.isLoading) {
                 return Center(child: CircularProgressIndicator());
               } else {
-                return buildList();
+                return buildList(viewModel.pokemonList, viewModel);
               }
             },
           ),
@@ -36,12 +37,21 @@ class PokemonListView extends StatelessWidget {
     );
   }
 
-  GridView buildList() {
+  GridView buildList(
+      List<PokemonListResultModel>? results, PokemonListViewModel viewModel) {
     return GridView.builder(
       padding: EdgeInsets.all(12),
-      itemCount: 20,
+      itemCount: results!.length,
       itemBuilder: (BuildContext context, int index) {
-        return PokemonListCard();
+        final data = results[index];
+
+        if (!viewModel.hasReachedEnd &&
+            index >= viewModel.offset + viewModel.limit - 1) {
+          viewModel.loadMorePokemons();
+        }
+        return PokemonListCard(
+          pokemon: data,
+        );
       },
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,

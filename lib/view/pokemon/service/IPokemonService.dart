@@ -6,5 +6,9 @@ import '../../../core/init/network/ICoreDio.dart';
 abstract class IPokemonService {
   ICoreDio? coreDio;
 
-  Future<PokemonListResponseModel?> getPokemons();
+  Future<PokemonListResponseModel?> getPokemons(
+      {Map<String, dynamic>? queryParameters});
+
+  Future<PokemonListResponseModel?> getPokemonDetail(
+      {Map<String, dynamic>? queryParameters});
 }

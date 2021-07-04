@@ -14,6 +14,8 @@ class PokemonListResultModel extends BaseModel<PokemonListResultModel> {
     return _$PokemonListResultModelFromJson(json);
   }
 
+  get index => null;
+
   @override
   PokemonListResultModel fromJson(Map<String, dynamic> json) {
     return _$PokemonListResultModelFromJson(json);

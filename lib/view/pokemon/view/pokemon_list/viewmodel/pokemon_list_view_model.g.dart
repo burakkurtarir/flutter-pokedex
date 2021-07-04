@@ -9,6 +9,21 @@ part of 'pokemon_list_view_model.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$PokemonListViewModel on _PokemonListViewModelBase, Store {
+  final _$pokemonListAtom = Atom(name: '_PokemonListViewModelBase.pokemonList');
+
+  @override
+  ObservableList<PokemonListResultModel> get pokemonList {
+    _$pokemonListAtom.reportRead();
+    return super.pokemonList;
+  }
+
+  @override
+  set pokemonList(ObservableList<PokemonListResultModel> value) {
+    _$pokemonListAtom.reportWrite(value, super.pokemonList, () {
+      super.pokemonList = value;
+    });
+  }
+
   final _$isLoadingAtom = Atom(name: '_PokemonListViewModelBase.isLoading');
 
   @override
@@ -41,6 +56,7 @@ mixin _$PokemonListViewModel on _PokemonListViewModelBase, Store {
   @override
   String toString() {
     return '''
+pokemonList: ${pokemonList},
 isLoading: ${isLoading}
     ''';
   }

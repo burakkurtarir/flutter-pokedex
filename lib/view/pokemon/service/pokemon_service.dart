@@ -11,12 +11,14 @@ class PokemonService implements IPokemonService {
   PokemonService(this.coreDio);
 
   @override
-  Future<PokemonListResponseModel?> getPokemons() async {
+  Future<PokemonListResponseModel?> getPokemons(
+      {Map<String, dynamic>? queryParameters}) async {
     final response =
         await coreDio!.send<PokemonListResponseModel, PokemonListResponseModel>(
       'pokemon/',
       type: HttpTypes.GET,
       parseModel: PokemonListResponseModel(),
+      queryParameters: queryParameters,
     );
     return response.data;
   }
